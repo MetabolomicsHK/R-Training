@@ -1,0 +1,7 @@
+plot(cars,font.lab=2,type="p")
+plot(cars,font.lab=2,type="l")
+plot(cars,font.lab=2,type="b")
+plot(cars,font.lab=2,type="o")
+plot(cars,font.lab=2,type="h")
+plot(cars,font.lab=2,type="s")
+plot(cars,font.lab=2,type="S")
