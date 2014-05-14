@@ -1,0 +1,5 @@
+par(mgp=c(1.6,0.6,0),mar=c(3,3,2,1))
+pch_type=c(1:5,15:19)
+X=1:10;Y=rep(6,10)
+plot(X,Y,col=1:10,pch=pch_type,cex=2,main="pch",font.lab=2)
+text(X,Y,col=1:10,adj=-0.5,labels=paste("pch=",pch_type),srt=90)
