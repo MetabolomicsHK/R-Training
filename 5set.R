@@ -21,6 +21,16 @@ grob.list <- venn.diagram(x=venn.data,filename=NULL,
                           )
 grid.draw(grob.list)
 
+
+##另一种方法
+source("http://faculty.ucr.edu/~tgirke/Documents/R_BioCond/My_R_Scripts/overLapper.R")
+##下面这句命令获得每个交集的ID
+OLlist <- overLapper(setlist=venn.data, sep="_", type="vennsets")
+counts <- list(sapply(OLlist$Venn_List, length))
+vennPlot(counts=counts, mysub="",ccol=c(rep(1,30),2), 
+         lcex=1.5, 
+         ccex=c(rep(1.5,5), rep(0.6,25),1.5))
+
 ##########################################################
 ##2个集合的文氏图
 ##准备数据
