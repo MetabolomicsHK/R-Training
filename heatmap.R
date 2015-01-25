@@ -20,7 +20,11 @@ heatmap.2(as.matrix(a),   ##需要矩阵类型数据,
           ColSideColors = sideColors)
 
 library("pheatmap")
-pheatmap(a,border_color=NA,color=redgreen(255))
 pheatmap(a,border_color=NA,color=hmColors)
+pheatmap(a,border_color=NA,color=redgreen(255))
+sample.class[is.na(sample.class)] <- "N"
+anno <- data.frame(Class=sample.class); row.names(anno) <- names(a)
+pheatmap(a,border_color=NA,color=redgreen(255),annotation = anno)
+
 
 
