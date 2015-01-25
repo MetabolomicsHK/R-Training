@@ -28,7 +28,7 @@ s3d <- scatterplot3d(plotData$x,plotData$y,plotData$z,type="h",angle = 24,
                      ylab = ylab,
                      zlab = zlab,
 )#color = as.numeric(as.factor(plotData$class)))
-s3d$points(plotData$x,plotData$y,plotData$z, pch = 1,col = 2)
+s3d$points(plotData$x,plotData$y,plotData$z, pch = 16,col = "green")
 s3d.coords <- s3d$xyz.convert(plotData$x,plotData$y,plotData$z)
 text(s3d.coords$x, s3d.coords$y, labels = plotData$sample,
      pos = 4,cex=0.7)
